@@ -15,24 +15,32 @@ public class Main extends Activity implements OnClickListener {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.main);
 
-    Button btnInicio = (Button) findViewById(R.id.btnInicio);
-    Button btnFin = (Button) findViewById(R.id.btnFin);
+    Button btnReproducirSonido = (Button) findViewById(R.id.btnReproducirSonido);
+    Button btnReproducirCancion = (Button) findViewById(R.id.btnReproducirCancion);
+    Button btnDetener = (Button) findViewById(R.id.btnDetener);
+    Button btnSeleccionarCancion = (Button) findViewById(R.id.btnSeleccionarCancion);
+    Button btnReproducirSeleccion = (Button) findViewById(R.id.btnReproducirSeleccion);
 
-    btnInicio.setOnClickListener(this);
-    btnFin.setOnClickListener(this);
-
-    in = new Intent(this, ElServicio.class);
+    btnReproducirSonido.setOnClickListener(this);
+    btnReproducirCancion.setOnClickListener(this);
+    btnDetener.setOnClickListener(this);
+    btnSeleccionarCancion.setOnClickListener(this);
+    btnReproducirSeleccion.setOnClickListener(this);
   }
 
   @Override
   public void onClick(View src) {
     switch (src.getId()) {
-    case R.id.btnInicio:      
-      startService(in);
-      break;
-    case R.id.btnFin:
-      stopService(in);
-      break;
+      case R.id.btnReproducirSonido:
+        break;
+      case R.id.btnReproducirCancion:
+        break;
+      case R.id.btnDetener:
+        break;
+      case R.id.btnSeleccionarCancion:
+        break;
+      case R.id.btnReproducirSeleccion:
+        break;
     }
   }
 }

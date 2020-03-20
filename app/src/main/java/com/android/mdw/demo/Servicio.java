@@ -6,7 +6,7 @@ import android.media.MediaPlayer;
 import android.os.IBinder;
 import android.widget.Toast;
 
-public class ElServicio extends Service {
+public class Servicio extends android.app.Service {
 
 	private MediaPlayer player;
 

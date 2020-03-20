@@ -13,18 +13,54 @@
 	<LinearLayout  
 		android:layout_width="match_parent" 
 		android:layout_height="wrap_content"
+		android:gravity="center"/>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
 		android:gravity="center">
-		<Button 
-			android:text="Inicio" 
-			android:id="@+id/btnInicio" 
-			android:layout_width="wrap_content" 
+		<Button
+			android:text="Reproducir sonido"
+			android:id="@+id/btnReproducirSonido"
+			android:layout_width="wrap_content"
 			android:layout_height="wrap_content">
 		</Button>
-		<Button 
-			android:layout_width="wrap_content" 
-			android:layout_height="wrap_content"
-			android:text="Detener" 
-			android:id="@+id/btnFin">
-		</Button>		
+		<Button
+			android:text="Reproducir cancion"
+			android:id="@+id/btnReproducirCancion"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+		</Button>
+	</LinearLayout>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center">
+		<Button
+			android:text="Detener"
+			android:id="@+id/btnDetener"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+		</Button>
+	</LinearLayout>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:gravity="center"></LinearLayout>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center">
+		<Button
+			android:text="Seleccionar cancion"
+			android:id="@+id/btnSeleccionarCancion"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+		</Button>
+		<Button
+			android:text="Reproducir seleccion"
+			android:id="@+id/btnReproducirSeleccion"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+		</Button>
 	</LinearLayout>
 </LinearLayout>
