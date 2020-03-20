@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class Main extends Activity implements OnClickListener {
   private Intent in;
@@ -30,12 +31,25 @@ public class Main extends Activity implements OnClickListener {
 
   @Override
   public void onClick(View src) {
+    Intent in;
+
     switch (src.getId()) {
       case R.id.btnReproducirSonido:
+        Toast.makeText(this, R.string.toastSonido, Toast.LENGTH_LONG).show();
+        in = new Intent(this, Servicio.class);
+        in.putExtra("action", getString(R.string.intentSonido));
+        startService(in);
         break;
       case R.id.btnReproducirCancion:
+        Toast.makeText(this, R.string.toastCancion, Toast.LENGTH_LONG).show();
+        in = new Intent(this, Servicio.class);
+        in.putExtra("action", getString(R.string.intentCancion));
+        startService(in);
         break;
       case R.id.btnDetener:
+        Toast.makeText(this, R.string.toastDetener, Toast.LENGTH_LONG).show();
+        in = new Intent(this, Servicio.class);
+        stopService(in);
         break;
       case R.id.btnSeleccionarCancion:
         break;
