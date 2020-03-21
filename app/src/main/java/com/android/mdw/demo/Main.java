@@ -35,21 +35,39 @@ public class Main extends Activity implements OnClickListener {
 
     switch (src.getId()) {
       case R.id.btnReproducirSonido:
+        //Llamada al servicio
+        //Toast.makeText(this, R.string.toastSonido, Toast.LENGTH_LONG).show();
+        //in = new Intent(this, Servicio.class);
+        //in.putExtra("action", getString(R.string.intentSonido));
+        //startService(in);
+        //Llamada al receptor y este llama al servicio
         Toast.makeText(this, R.string.toastSonido, Toast.LENGTH_LONG).show();
-        in = new Intent(this, Servicio.class);
+        in = new Intent(this, Receptor.class);
         in.putExtra("action", getString(R.string.intentSonido));
-        startService(in);
+        sendBroadcast(in);
         break;
       case R.id.btnReproducirCancion:
+        //Llamada al servicio
+        //Toast.makeText(this, R.string.toastCancion, Toast.LENGTH_LONG).show();
+        //in = new Intent(this, Servicio.class);
+        //in.putExtra("action", getString(R.string.intentCancion));
+        //startService(in);
+        //Llamada al receptor y este llama al servicio
         Toast.makeText(this, R.string.toastCancion, Toast.LENGTH_LONG).show();
-        in = new Intent(this, Servicio.class);
-        in.putExtra("action", getString(R.string.intentCancion));
-        startService(in);
+        in = new Intent(this, Receptor.class);
+        in.putExtra("action", getString(R.string.intentSonido));
+        sendBroadcast(in);
         break;
       case R.id.btnDetener:
+        //Llamada al servicio
+        //Toast.makeText(this, R.string.toastDetener, Toast.LENGTH_LONG).show();
+        //in = new Intent(this, Servicio.class);
+        //stopService(in);
+        //Llamada al receptor y este llama al servicio
         Toast.makeText(this, R.string.toastDetener, Toast.LENGTH_LONG).show();
-        in = new Intent(this, Servicio.class);
-        stopService(in);
+        in = new Intent(this, Receptor.class);
+        in.putExtra("action", getString(R.string.intentDetener));
+        sendBroadcast(in);
         break;
       case R.id.btnSeleccionarCancion:
         break;

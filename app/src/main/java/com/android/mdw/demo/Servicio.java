@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.widget.Toast;
 
-public class Servicio extends android.app.Service {
+public class Servicio extends Service {
 
 	private MediaPlayer sonido;
 	private MediaPlayer cancion;
@@ -38,7 +38,18 @@ public class Servicio extends android.app.Service {
 	public int onStartCommand(Intent intent, int flags, int startid) {
 		Toast.makeText(this, R.string.iniserv, Toast.LENGTH_LONG).show();
 		Bundle data = intent.getExtras();
+		String action = data.getString("action");
 
+		if(action.equals(getString(R.string.intentSonido))) {
+			sonido.start();
+		}
+		else if(action.equals(getString(R.string.intentCancion))) {
+			cancion.start();
+		}
+		else if(action.equals(getString(R.string.intentDetener))) {
+			sonido.stop();
+			cancion.stop();
+		}
 		return startid;
 	}
 }

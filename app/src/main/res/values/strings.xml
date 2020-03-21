@@ -11,4 +11,5 @@
     <string name="toastDetener">Deteniendo reproduccion</string>
     <string name="intentSonido">Iniciar sonido</string>
     <string name="intentCancion">Iniciar cancion</string>
+    <string name="intentDetener">Detener reproduccion</string>
 </resources>
