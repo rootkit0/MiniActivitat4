@@ -12,4 +12,7 @@
     <string name="intentSonido">Iniciar sonido</string>
     <string name="intentCancion">Iniciar cancion</string>
     <string name="intentDetener">Detener reproduccion</string>
+    <string name="serviceSonido">Servicio sonido activado</string>
+    <string name="serviceCancion">Servicio cancion activado</string>
+    <string name="serviceDetener">Servicio detenido</string>
 </resources>
