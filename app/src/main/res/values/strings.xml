@@ -15,4 +15,7 @@
     <string name="serviceSonido">Servicio sonido activado</string>
     <string name="serviceCancion">Servicio cancion activado</string>
     <string name="serviceDetener">Servicio detenido</string>
+
+    <string name="auxOn">Intent recibido Receptor - EVENTO DEL SISTEMA ON</string>
+    <string name="auxOff">Intent recibido Receptor - EVENTO DEL SISTEMA OFF</string>
 </resources>
