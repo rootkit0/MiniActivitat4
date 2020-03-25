@@ -55,7 +55,7 @@ public class Main extends Activity implements OnClickListener {
         //Llamada al receptor y este llama al servicio
         Toast.makeText(this, R.string.toastCancion, Toast.LENGTH_LONG).show();
         in = new Intent(this, Receptor.class);
-        in.putExtra("action", getString(R.string.intentSonido));
+        in.putExtra("action", getString(R.string.intentCancion));
         sendBroadcast(in);
         break;
       case R.id.btnDetener:

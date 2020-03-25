@@ -43,10 +43,10 @@ public class Servicio extends Service {
 		if(action.equals(getString(R.string.intentSonido))) {
 			sonido.start();
 		}
-		else if(action.equals(getString(R.string.intentCancion))) {
+		if(action.equals(getString(R.string.intentCancion))) {
 			cancion.start();
 		}
-		else if(action.equals(getString(R.string.intentDetener))) {
+		if(action.equals(getString(R.string.intentDetener))) {
 			sonido.stop();
 			cancion.stop();
 		}
