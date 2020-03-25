@@ -2,7 +2,9 @@ package com.android.mdw.demo;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -69,9 +71,17 @@ public class Main extends Activity implements OnClickListener {
         in.putExtra("action", getString(R.string.intentDetener));
         sendBroadcast(in);
         break;
+      //OPCIONAL
       case R.id.btnSeleccionarCancion:
+        in = new Intent(Intent.ACTION_PICK, MediaStore.Audio.Media.EXTERNAL_CONTENT_URI);
+        startActivityForResult(in, 0);
         break;
       case R.id.btnReproducirSeleccion:
+        Toast.makeText(this, R.string.intentUri, Toast.LENGTH_LONG).show();
+        in = new Intent(this, Servicio.class);
+        in.setData(Uri.parse("content://media/external/audio/media/57"));
+        in.putExtra("action", getString(R.string.intentUri));
+        startService(in);
         break;
     }
   }

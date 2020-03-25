@@ -3,6 +3,7 @@ package com.android.mdw.demo;
 import android.app.Service;
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.widget.Toast;
@@ -11,6 +12,8 @@ public class Servicio extends Service {
 
 	private MediaPlayer sonido;
 	private MediaPlayer cancion;
+	//OPCIONAL
+	private MediaPlayer uri;
 
 	@Override
 	public IBinder onBind(Intent intent) {
@@ -32,6 +35,12 @@ public class Servicio extends Service {
 		Toast.makeText(this, R.string.finaserv, Toast.LENGTH_LONG).show();
 		sonido.stop();
 		cancion.stop();
+		try{
+			uri.stop();
+		}
+		catch(Exception e){
+
+		}
 	}
 	
 	@Override
@@ -49,6 +58,19 @@ public class Servicio extends Service {
 		if(action.equals(getString(R.string.intentDetener))) {
 			sonido.stop();
 			cancion.stop();
+			try{
+				uri.stop();
+			}
+			catch(Exception e){
+
+			}
+		}
+		//OPCIONAL
+		if(action.equals(R.string.intentUri)) {
+			Uri cancion = intent.getData();
+			uri = MediaPlayer.create(this, cancion);
+			uri.setLooping(true);
+			uri.start();
 		}
 		return startid;
 	}

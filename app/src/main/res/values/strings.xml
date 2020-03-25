@@ -18,4 +18,5 @@
 
     <string name="auxOn">Intent recibido Receptor - EVENTO DEL SISTEMA ON</string>
     <string name="auxOff">Intent recibido Receptor - EVENTO DEL SISTEMA OFF</string>
+    <string name="intentUri">Iniciar cancion via Uri</string>
 </resources>
